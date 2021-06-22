@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+  <title>{{ title }}</title>
+  <style>
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.header {
+  padding: 15px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 20px;
+}
+body {
+  background-image: url('back.jpg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}
+</style>
+</head>
+
+<body>
+  <div class="header">
+  <h1>IRRIGATION WEB-APP</h1>
+</div>
+<center>
+  <h2 style="color:DodgerBlue;">CURRENT TIMESTAMP: {{ time }}</h2>
+  <h2 style="color:Tomato;"> {{ text }} </h2>
+  <a href="/auto/water/ON"><button class="button">ON Auto Watering</button></a>
+  <a href="/auto/water/OFF"><button class="button">OFF Auto Watering</button></a>
+  <a href="/sensor"><button class="button">Soil Status</button></a> <br> <br> <br>
+  <p><a href="/water"><button class="button">Water Once</button></a>
+  <a href="/last_watered"><button class="button">Check Time Last Watered</button></a></p>
+</center>
+</body>
+</html>
